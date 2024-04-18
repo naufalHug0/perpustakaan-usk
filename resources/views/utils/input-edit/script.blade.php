@@ -1,0 +1,1 @@
+<script src="{{ asset('js/components/input-edit/index.js') }}"></script>

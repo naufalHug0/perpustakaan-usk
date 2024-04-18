@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    *,*::before, *::after{
+        font-family: 'Source Sans 3', 'sans-serif';
+        box-sizing: border-box;
+    }
+
+    body {
+        scroll-behavior: smooth;
+    }
+}
+
+@layer components {
+    .tabs-item {
+        @apply px-5 text-center py-4 rounded-md font-bold transition duration-300 text-light-berry hover:bg-[#4f2c9a1f] min-w-[140px];
+    }
+
+    .tabs-item.active {
+        @apply bg-purple text-white;
+    }
+    .book-stok-status.success {
+        @apply bg-[rgb(231,254,212)] text-[rgba(22,13,61,.6)];
+    }
+    .book-stok-status.danger {
+        @apply bg-red-400 text-white;
+    }
+    .admin-status.success {
+        @apply bg-green-400
+    }
+    .admin-status.danger {
+        @apply bg-red-400
+    }
+    input.invalid {
+        @apply border-red-500
+    }
+    .notification {
+        @apply fixed shadow-md bottom-0 top-0 right-0 left-0 m-auto w-[50vw] h-max bg-white rounded-xl z-20 flex items-center justify-center flex-col px-7 py-8
+    }
+    .overlay {
+        @apply fixed left-0 right-0 bottom-0 top-0 bg-[rgba(0,0,0,.5)] z-10
+    }
+    .notification-button {
+        @apply px-5 py-3 font-bold flex justify-center items-center grow rounded-md hover:brightness-[85%] transition cursor-pointer
+    }
+    .notification-button.primary {
+        @apply bg-purple text-white 
+    }
+    .notification-button.secondary {
+        @apply bg-light-berry text-white 
+    }
+    .notification-button.danger {
+        @apply bg-red-500 text-white 
+    }
+}
+
+@layer utilities {
+    .font-poppins {
+        font-family: 'Poppins','sans-serif';
+    }
+}
